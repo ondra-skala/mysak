@@ -1,0 +1,159 @@
+body{
+    text-align: center;
+    background-color: #ccc;
+}
+
+img{
+    height: 10rem;
+}
+
+.prepinac{
+    padding-top: 3rem;
+}
+
+.tlacitka{
+    padding-top: 4rem;
+    outline: none;
+}
+
+h1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+button{
+    background-color: white;
+    border-radius: 10%;
+    border: none;
+}
+
+.nahoru{
+    margin-right: 0.5rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    height: 96px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(233, 229, 229);
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 82px;
+    width: 82px;
+    left: 8px;
+    bottom: 8px;
+    background-color: white;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  
+  input:checked + .slider {
+    background-color: #fd4900;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 3px #ccc;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(78px);
+    -ms-transform: translateX(78px);
+    transform: translateX(78px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 64px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.pravo{
+    margin-right: 1rem;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
